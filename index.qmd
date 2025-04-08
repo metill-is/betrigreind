@@ -17,3 +17,103 @@ html-math-method:
 revealjs-plugins:
   - simplemenu
 ---
+
+## Orsakasamhengi og gagnabjagi
+
+::: {.columns style="font-size:56%"}
+::: {.column width=50%}
+![](Figures/lsh.png){fig-align="center"}
+:::
+::: {.column}
+- Fólk á sjúkrahúsum er að jafnaði veikara en annað
+- Eru sjúkrahús slæm fyrir heilsuna?
+
+::: {.columns style="font-size:56%"}
+::: {.column width=49%}
+![](Figures/hospital.png)
+:::
+::: {.column width=49%}
+![](Figures/home.png)
+:::
+:::
+:::
+:::
+
+## Ronald Fisher 
+
+::: {.columns style="font-size:40%"}
+::: {.column width=56%}
+![](Figures/ronald_fisher.png){fig-align="center" width=60%}
+:::
+::: {.column width=44%}
+> "In relation to the test of significance, the experimenter is often not so much testing a hypothesis as interrogating Nature, asking her, as it were, a question; and **randomization is the device which ensures that Nature’s answer shall be a valid one**.”
+>
+> — Ronald A. Fisher, The Design of Experiments (1935)
+
+
+![](Figures/statmethods.png){fig-align="center" width=46%}
+![](Figures/rothamstead.png){fig-align="center" width=45%}
+:::
+:::
+
+## Slembitilraunir
+
+::: {.columns}
+::: {.column width=33%}
+![](Figures/farmer1.png)
+:::
+::: {.column width=33%}
+![](Figures/field.png)
+:::
+::: {.column width=33%}
+![](Figures/farmer2.png)
+:::
+:::
+
+## Judea Pearl
+
+::: {.columns style="font-size:56%"}
+::: {.column}
+![](Figures/judeapearl.jpg){fig-align="center"}
+
+> "Behind every causal conclusion there must lie some causal assumption that is not testable in observational studies."
+>
+> Judea Pearl
+:::
+::: {.column}
+![](Figures/causality.jpg){fig-align="center" width=70%}
+:::
+:::
+
+## Ladder of Causation
+
+:::: {.columns style="font-size:56%"}
+::: {.column width="50%"}
+![](Figures/ladder.png)
+
+
+:::
+
+::: {.column width="50%"}
+
+> All the impressive achievements of deep learning amount to just curve fitting.
+> 
+> Judea Pearl
+
+:::
+::::
+
+
+
+## Þegar fylgni ≠ orsakasamhengi: Varúðarsögur
+
+::: {.columns}
+::: {.column}
+- Dæmi um gervigreind í heilbrigðiskerfi
+- Spákerfi sem magnar upp fyrirliggjandi bjaga
+:::
+::: {.column}
+![Fyrir/eftir mynd sem sýnir áhrif orsakagreiningar](Figures/before_after_causality.png){fig-align="center"}
+:::
+:::
+
