@@ -39,19 +39,19 @@ revealjs-plugins:
 :::
 :::
 
-## Ronald Fisher 
+## Ronald Fisher  *(1890 - 1962)*
 
-::: {.columns style="font-size:40%"}
-::: {.column width=56%}
+::: {.columns style="font-size:45%"}
+::: {.column width=60%}
 ![](Figures/ronald_fisher.png){fig-align="center" width=60%}
 :::
-::: {.column width=44%}
+::: {.column width=40%}
 > "In relation to the test of significance, the experimenter is often not so much testing a hypothesis as interrogating Nature, asking her, as it were, a question; and **randomization is the device which ensures that Nature’s answer shall be a valid one**.”
 >
 > — Ronald A. Fisher, The Design of Experiments (1935)
 
 
-![](Figures/statmethods.png){fig-align="center" width=46%}
+![](Figures/statmethods.jpg){fig-align="center" width=45%}
 ![](Figures/rothamstead.png){fig-align="center" width=45%}
 :::
 :::
@@ -70,13 +70,57 @@ revealjs-plugins:
 :::
 :::
 
-## Judea Pearl
+## Glæpahneigð og... nefhorn?
+
+::: {.columns style="font-size:65%"}
+::: {.column width="60%"}
+### Wu og Zhang (2016)
+- Rannsakendur þróuðu gervigreindarlíkan sem þeir fullyrtu að gæti:
+  - Greint "afbrotamenn" frá "óflekkuðum" einstaklingum
+  - Náð 89,5% nákvæmni
+  - Fundið líffræðilegar vísbendingar um "meðfædda afbrotahneigð"
+- 1800 myndir af kínverskum karlmönnum
+  - 700 sakfelldir glæpamenn
+  - 1100 almennir borgarar
+:::
+
+::: {.column width="40%"}
+![](Figures/crimeface.png)
+:::
+:::
+
+::: {.columns style="font-size:50%"}
+> The algorithm finds that criminals have shorter distances between the inner corners of the eyes, smaller angles θ between the nose and the corners of the mouth, and higher curvature ρ to the upper lip.
+>
+> Bergstrom & West í bókinni Calling Bullshit
+
+:::
+
+## Grundvallargallar rannsóknarinnar
+
+::: {style="font-size:80%"}
+1. **Bjagi í gögnunum**: 
+    - Myndir "afbrotamanna" voru úr gagnagrunni lögreglu
+    - Myndir "óflekkuðra" einstaklinga voru úr almennum ljósmyndum
+
+2. **Rangur mælikvarði**:
+    - Líkanið greindi í raun ekki "afbrotahneigð"
+    - Það greindi mun á skilríkjum og venjulegum myndum
+:::
+
+::: {style="font-size:60%"}
+> A machine learning algorithm is only as good as its training data, and these training data are fundamentally flawed. [...] The algorithm in this paper is not picking up some underlying physical structures associated with criminality.
+>
+> Bergstrom & West í bókinni Calling Bullshit
+:::
+
+## Orsakagreining
 
 ::: {.columns style="font-size:56%"}
 ::: {.column}
 ![](Figures/judeapearl.jpg){fig-align="center"}
 
-> "Behind every causal conclusion there must lie some causal assumption that is not testable in observational studies."
+> Behind every causal conclusion there must lie some causal assumption that is not testable in observational studies.
 >
 > Judea Pearl
 :::
@@ -103,17 +147,32 @@ revealjs-plugins:
 :::
 ::::
 
+## Lungnabólga og asmi
 
+::: {.incremental}
+- 1996 rannsókn sýndi að gervigreindarlíkan spáði fyrir um áhættu sjúklinga með lungnabólgu
+- **Óvæntar niðurstöður**: Líkanið spáði að astmasjúklingar væru í *minni* áhættu vegna lungnabólgu
+- Ef líkanið væri notað, myndu astmasjúklingar líklega sendir heim fremur en á gjörgæslu
+:::
 
-## Þegar fylgni ≠ orsakasamhengi: Varúðarsögur
+## Af hverju gerðist þetta?
 
 ::: {.columns}
-::: {.column}
-- Dæmi um gervigreind í heilbrigðiskerfi
-- Spákerfi sem magnar upp fyrirliggjandi bjaga
-:::
-::: {.column}
-![Fyrir/eftir mynd sem sýnir áhrif orsakagreiningar](Figures/before_after_causality.png){fig-align="center"}
-:::
+::: {.column width="50%"}
+### Hvað gerðist í raun?
+
+- Astmasjúklingar voru í meiri hættu
+- Þeir fengu betri og tafarlausari meðferð
+- Þeir voru sendir beint á gjörgæslu
+- Niðurstaða: Færri fylgikvillar *mældir* hjá astmasjúklingum
 :::
 
+::: {.column width="50%"}
+### Hvað lærði líkanið?
+
+- Gat aðeins byggt á sögulegu gögnum
+- Lærði að astma → minni fylgikvillar
+- En lærði ekki *af hverju* þetta samband var til staðar
+- Ruglað fylgni (correlation) saman við orsakasamhengi (causation)
+:::
+:::
