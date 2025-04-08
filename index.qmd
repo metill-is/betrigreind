@@ -1,0 +1,19 @@
+---
+title: "Bjagi, dreifni og orsakasamhengi"
+subtitle: "Mikilvæg hugtök í heimi gervigreindar"
+author:
+  - name: Brynjólfur Gauti Guðrúnar Jónsson
+format: 
+  revealjs:
+    theme: theme.scss
+    simplemenu:
+      flat: false
+      barhtml:
+        header: "<div class='menubar mb-10'><ul class='menu'></ul><div>"
+        footer: "<div class='footer footer-default' style='display: block;'> <a href='https://metill.is/betrigreind' target='_blank'>metill.is/betrigreind</a></div>"
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+revealjs-plugins:
+  - simplemenu
+---
