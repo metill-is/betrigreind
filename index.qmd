@@ -18,7 +18,7 @@ revealjs-plugins:
   - simplemenu
 ---
 
-## Orsakasamhengi og gagnabjagi
+## Orsakasamhengi og gagnabjagi {data-name="Inngangur"}
 
 ::: {.columns style="font-size:56%"}
 ::: {.column width=50%}
@@ -94,7 +94,7 @@ Er þetta **dreifni** eða **bjagi**?
     - Leiðum út besta líkan
 :::
 
-## Ronald Fisher  *(1890 - 1962)*
+## Ronald Fisher  *(1890 - 1962)* {data-name="Íhlutun"}
 
 ::: {.columns style="font-size:45%"}
 ::: {.column width=60%}
@@ -125,7 +125,7 @@ Er þetta **dreifni** eða **bjagi**?
 :::
 :::
 
-## Samsvörun (Matching)
+## Samsvörun (Matching) {data-name="Skynsamleg gögn"}
 
 ::: {style="font-size:60%"}
 ### Hvað er samsvörun?
@@ -222,7 +222,7 @@ Er þetta **dreifni** eða **bjagi**?
 > Bergstrom & West í bókinni Calling Bullshit
 :::
 
-## Orsakagreining
+## Orsakagreining {data-name="Orsakagreining"}
 
 ::: {.columns style="font-size:56%"}
 ::: {.column}
@@ -273,7 +273,7 @@ Er þetta **dreifni** eða **bjagi**?
 > Narayanan & Kapoor - AI Snake Oil
 :::
 
-## Samantekt
+## Samantekt {data-name="Samantekt"}
 
 ::: {style="font-size:65%"}
 ### Lykilhugtök og lærdómur
