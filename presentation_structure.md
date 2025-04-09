@@ -3,65 +3,59 @@ Introduction (2-3 minutes)
 
 Brief welcome and context for the talk
 Reference to the event theme: "Gagnagæði – betri greind"
-Opening example using hospitals to illustrate selection bias in data
-Preview of main themes: how statistical concepts remain crucial in the AI era
+Opening statement about the importance of causal claims in data science and AI
+Preview of the three ways to enable causal claims
+Visual: Overview diagram of the three approaches
 
-1. Ronald Fisher and the Importance of Randomization (4-5 minutes)
+1. Intervening in the World: Randomized Experiments (6-7 minutes)
 
-Fisher's revolutionary contributions to experimental design
-Why randomization matters: addressing confounding bias
-The agricultural experiments that changed science
-Key principle: randomization as the foundation of causal inference
-How these principles transcend computational power and remain relevant in modern data science
-Visual: Simple diagram showing randomized vs non-randomized experiment
+Ronald Fisher and the Rothamsted Experimental Station
+Why the existing observational data was deemed insufficient
+The revolutionary concept of randomization in experiments
+Key principles of experimental design
+How randomization addresses confounding bias
+Visual: Simple diagram comparing observational vs randomized data
+Legacy: How these principles remain crucial in the AI era
 
-2. Bias vs. Variance Tradeoff (3-4 minutes)
+2. Choosing Smart Data: Strategic Observational Studies (6-7 minutes)
 
-Explanation of the two fundamental sources of error
-Visual: Target/bullseye diagram showing the different bias-variance scenarios
-The scaling properties: how more data affects each type of error
-Key insight: Big data primarily reduces variance but not bias
-Connection to AI: why massive datasets still produce biased models
-Example: Simple demonstration of a biased model becoming more confident with more data
+Introduction to observational studies and matching
+The seat-belts example from Rosenbaum's "Design of Observational Studies"
+Cautionary tale: Wu and Zhang (2016) paper
+Analysis of what went wrong and how better data selection could have helped
+Techniques for improving observational studies
+Visual: Diagram showing matching principles and their effects
+Key takeaway: Quality over quantity in data selection
 
-3. Causal Inference and Pearl's "do-calculus" (5-6 minutes)
+3. Modeling the World: Causal Inference and DAGs (6-7 minutes)
 
-The limits of observational data
 Introduction to Judea Pearl's framework
-The crucial distinction: P(Y|X) vs P(Y|do(X))
-Visual: Simple causal diagram (DAG) illustrating correlation vs causation
-The ladder of causation: association → intervention → counterfactuals
-Why modern AI systems struggle with causality
-Example: A simple case where intervention differs from observation
+Understanding Directed Acyclic Graphs (DAGs)
+The three main confounders:
+    - Forks
+    - Colliders
+    - Post Treatment Bias
+The Asthma example:
+    - Building the DAG
+    - Identifying testable implications
+    - Demonstrating proper causal reasoning
+Visual: DAG examples and the Asthma case study
+Why this approach matters for modern AI systems
 
-4. When Correlation ≠ Causation: Cautionary Tales (4-5 minutes)
+Conclusion (2-3 minutes)
 
-Examples from "AI Snake Oil" or similar sources
-Case study 1: A medical AI that learned the wrong signals
-Case study 2: A predictive system that reinforced existing biases
-Analysis of what went wrong in statistical terms
-How proper causal understanding could have prevented these failures
-Visual: Before/after showing how causal reasoning changes predictions
-
-5. Looking Forward: Better Workflows (3-4 minutes)
-
-Practical guidelines for ensuring data quality in AI development
-The importance of causal diagrams before modeling
-Techniques for sensitivity analysis and bias detection
-Why small, well-designed datasets often outperform massive messy ones
-The complementary relationship between statistical rigor and AI capabilities
-
-Conclusion (1-2 minutes)
-
-Recap of key messages
-Final statement on quality vs quantity
-Call to action: what attendees can implement in their own work
+Recap of the three approaches to causal claims
+    1. Intervene manually (randomization)
+    2. Choose data smartly (matching)
+    3. Model your assumptions (DAGs)
+The complementary nature of these approaches
+Final thoughts on the importance of causal understanding in the AI era
 Thank you and invitation for questions
 
 Visual Elements to Prepare
 
-Timeline showing the evolution from Fisher to modern causal inference
-Target diagram for bias-variance tradeoff
-Simple causal diagrams for key examples
-Before/after visualizations showing impact of proper causal reasoning
-Quality vs quantity visualization
+Diagram showing the three approaches to causal claims
+Historical photos/diagrams from Rothamsted experiments
+Matching visualization for the seat-belts example
+DAG templates for common confounding patterns
+Full DAG for the Asthma example with testable implications

@@ -162,6 +162,73 @@ Brynjólfur Gauti Guðrúnar Jónsson
 </div></div>
 </div></div>
 </section>
+<section id="bjagi-og-dreifni" class="slide level2">
+<h2>Bjagi og dreifni</h2>
+<div class="columns" style="font-size:60%">
+<div class="column" style="width:60%;">
+<h3 id="tvær-tegundir-skekkju">Tvær tegundir skekkju</h3>
+<ul>
+<li><strong>Bjagi</strong> (bias):
+<ul>
+<li>Kerfisbundin skekkja</li>
+<li>Breytist ekki þótt athugunum fjölgi</li>
+<li>Dæmi: Einfalt líkan sem missir af mikilvægum mynstrum</li>
+</ul></li>
+<li><strong>Dreifni</strong> (variance):
+<ul>
+<li>Tilviljanakennd skekkja</li>
+<li>Minnkar þegar athugunum fjölgar</li>
+<li>Dæmi: Flókið líkan sem lærir hávaða í gögnunum</li>
+</ul></li>
+</ul>
+<h3 id="orsakasamhengi-og-bjagi">Orsakasamhengi og bjagi</h3>
+<ul>
+<li>Bjagi er aðalvandamálið þegar orsakasamhengi er rangt</li>
+<li>Fleiri gögn laga ekki kerfisbundinn bjaga</li>
+<li>Dæmi: Sjúkrahúsdæmið sýnir bjaga vegna vals</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/bias_variance.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="gagnabjagi" class="slide level2">
+<h2>Gagnabjagi</h2>
+<div class="columns" style="font-size:60%">
+<div class="column" style="width:54%;">
+<p><img data-src="Figures/sampling_bias.avif"></p>
+</div><div class="column" style="width:46%;">
+<p><img data-src="Figures/selection_bias_xkcd.png"></p>
+</div><p>Er þetta <strong>dreifni</strong> eða <strong>bjagi</strong>?</p>
+</div>
+</section>
+<section id="hvað-getum-við-gert" class="slide level2">
+<h2>Hvað getum við gert?</h2>
+<div style="font-size:70%">
+<ol type="1">
+<li><strong>Íhlutun í heiminum</strong>
+<ul>
+<li>Handahófskennd úthlutun</li>
+<li>Jafnar áhrifabreytur</li>
+<li>“Gold standard” orsakarannsókna</li>
+</ul></li>
+<li><strong>Skynsamlega valin gögn</strong>
+<ul>
+<li>Náttúrulegar tilraunir</li>
+<li>Samsvörun (matching)</li>
+<li>Gæði umfram magn</li>
+</ul></li>
+<li><strong>Orsakagreining</strong>
+<ul>
+<li>Tilkynnum forsendur</li>
+<li>Leiðum út besta líkan</li>
+</ul></li>
+</ol>
+</div>
+</section>
 <section id="ronald-fisher-1890---1962" class="slide level2">
 <h2>Ronald Fisher <em>(1890 - 1962)</em></h2>
 <div class="columns" style="font-size:45%">
@@ -190,6 +257,68 @@ Brynjólfur Gauti Guðrúnar Jónsson
 <p><img data-src="Figures/farmer2.png"></p>
 </div></div>
 </section>
+<section id="samsvörun-matching" class="slide level2">
+<h2>Samsvörun (Matching)</h2>
+<div style="font-size:60%">
+<h3 id="hvað-er-samsvörun">Hvað er samsvörun?</h3>
+<ul>
+<li>Aðferð til að <strong>para saman einstaklinga</strong> sem eru líkir á öllum mikilvægum þáttum <strong>nema meðferðinni</strong> sem við rannsökum</li>
+<li>Markmið: Skapa <strong>jafnvægi</strong> í áhrifaþáttum milli samanburðarhópa</li>
+<li>Grundvallaratriði: Bera saman <strong>sambærilegar einingar</strong> til að draga ályktanir um orsakasambönd</li>
+</ul>
+<h3 id="dæmi-um-nálgun">Dæmi um nálgun</h3>
+<ul>
+<li>Para saman skóla með svipað hlutfall nemenda úr erfiðum aðstæðum</li>
+<li>Bera saman sjúklinga með svipaða sjúkrasögu og aldur</li>
+<li>Bera saman íbúa með svipaða félagslega stöðu</li>
+</ul>
+</div>
+</section>
+<section id="öryggisbelti-og-bílslys-flókin-orsakasamhengi" class="slide level2">
+<h2>Öryggisbelti og bílslys: Flókin orsakasamhengi</h2>
+<ul>
+<li><strong>Spurning</strong>: Draga öryggisbelti úr dánartíðni í bílslysum?</li>
+<li><strong>Vandamál</strong>: Ekki hægt að gera tilraun með slembiröðun</li>
+<li><strong>Flækjustig</strong>:
+<ul>
+<li>Margir þættir hafa áhrif á alvarleika slysa (hraði, vegaðstæður, viðbragðstími)</li>
+<li>Fólk sem notar belti er líklega varfærnara almennt</li>
+</ul></li>
+</ul>
+</section>
+<section id="venjuleg-greining-með-bjaga" class="slide level2">
+<h2>Venjuleg greining (með bjaga)</h2>
+<div class="columns" style="font-size:65%">
+<div class="column" style="width:50%;">
+<h3 id="algeng-nálgun">Algeng nálgun</h3>
+<ul>
+<li>Bera saman dánartíðni:
+<ul>
+<li>Fólk með belti vs.&nbsp;ekki með belti</li>
+</ul></li>
+<li><strong>Vandamál</strong>:
+<ul>
+<li>Varfærnir ökumenn nota belti</li>
+<li>Áhættusæknir ökumenn nota síður belti</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="náttúruleg-tilraun">Náttúruleg tilraun</h3>
+<ul>
+<li>Greindi slys þar sem <strong>tveir voru í bíl</strong></li>
+<li><strong>Ein manneskja með belti, önnur án</strong></li>
+<li><strong>Önnur manneskjan lifði, hin lést</strong></li>
+<li>Margir áhrifaþættir eru þá <strong>eins fyrir báða</strong>:
+<ul>
+<li>Hraði bílsins</li>
+<li>Vegaðstæður</li>
+<li>Árekstrarhornið</li>
+<li>Ökumaðurinn</li>
+</ul></li>
+</ul>
+</div></div>
+
+<img data-src="Figures/seatbelts_table.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="glæpahneigð-og-nefhorn" class="slide level2">
 <h2>Glæpahneigð og… nefhorn?</h2>
 <div class="columns" style="font-size:65%">
@@ -261,49 +390,71 @@ Brynjólfur Gauti Guðrúnar Jónsson
 </figure>
 </div>
 </div></div>
-</section>
-<section id="ladder-of-causation" class="slide level2">
-<h2>Ladder of Causation</h2>
-<div class="columns" style="font-size:56%">
-<div class="column" style="width:50%;">
-<p><img data-src="Figures/ladder.png"></p>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>All the impressive achievements of deep learning amount to just curve fitting.</p>
-<p>Judea Pearl</p>
-</blockquote>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="Figures/fork.png"></p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="Figures/pipe.png"></p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="Figures/collider.png"></p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="Figures/descendant.png"></p>
 </div></div>
 </section>
-<section id="lungnabólga-og-asmi" class="slide level2">
-<h2>Lungnabólga og asmi</h2>
-<div>
+<section id="gervigreindarspár-og-ákvarðanir" class="slide level2">
+<h2>Gervigreindarspár og ákvarðanir</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <ul>
-<li class="fragment">1996 rannsókn sýndi að gervigreindarlíkan spáði fyrir um áhættu sjúklinga með lungnabólgu</li>
-<li class="fragment"><strong>Óvæntar niðurstöður</strong>: Líkanið spáði að astmasjúklingar væru í <em>minni</em> áhættu vegna lungnabólgu</li>
-<li class="fragment">Ef líkanið væri notað, myndu astmasjúklingar líklega sendir heim fremur en á gjörgæslu</li>
+<li>Útkoma sjúklinga eftir inflúensu?
+<ul>
+<li>Líkanið spáði að astmasjúklingar væru í <em>minni</em> áhættu vegna lungnabólgu</li>
+</ul></li>
+<li>Hætta á of háum blóðþrýstingi
+<ul>
+<li>Sjúklegar með háan blóðþrýsting eru á lyfjum</li>
+<li>Líkanið ruglast ef það er ekki tekið með í reikninginn</li>
+</ul></li>
 </ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="Figures/aisnakeoil.jpg"></p>
+</div></div>
+<div style="font-size:60%">
+<blockquote>
+<p>This issue arose in part ­ because the researchers relied on existing data rather than new data collected specifically for the task. Generally, collecting data is expensive and time-consuming. So, some AI developers claim that existing data is enough to make good decisions.</p>
+<p>Narayanan &amp; Kapoor - AI Snake Oil</p>
+</blockquote>
 </div>
 </section>
-<section id="af-hverju-gerðist-þetta" class="slide level2">
-<h2>Af hverju gerðist þetta?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="hvað-gerðist-í-raun">Hvað gerðist í raun?</h3>
+<section id="samantekt" class="slide level2">
+<h2>Samantekt</h2>
+<section id="lykilhugtök-og-lærdómur" style="font-size:65%">
+<h3>Lykilhugtök og lærdómur</h3>
+<ol type="1">
+<li><strong>Bjagi og dreifni</strong>
 <ul>
-<li>Astmasjúklingar voru í meiri hættu</li>
-<li>Þeir fengu betri og tafarlausari meðferð</li>
-<li>Þeir voru sendir beint á gjörgæslu</li>
-<li>Niðurstaða: Færri fylgikvillar <em>mældir</em> hjá astmasjúklingum</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="hvað-lærði-líkanið">Hvað lærði líkanið?</h3>
+<li>Bjagi: Kerfisbundin skekkja sem fleiri gögn laga ekki</li>
+<li>Dreifni: Tilviljanakennd skekkja sem minnkar með fleiri gögnum</li>
+</ul></li>
+<li><strong>Orsakasamhengi og gagnabjagi</strong>
 <ul>
-<li>Gat aðeins byggt á sögulegu gögnum</li>
-<li>Lærði að astma → minni fylgikvillar</li>
-<li>En lærði ekki <em>af hverju</em> þetta samband var til staðar</li>
-<li>Ruglað fylgni (correlation) saman við orsakasamhengi (causation)</li>
-</ul>
-</div></div>
+<li>Gagnabjagi getur leitt til rangra ályktana um orsakasamhengi</li>
+<li>Mikilvægt að greina á milli fylgni og orsakasamhengis</li>
+</ul></li>
+<li><strong>Lausnir og aðferðir</strong>
+<ul>
+<li>Slembitilraunir (Ronald Fisher)</li>
+<li>Samsvörun (matching) sambærilegra eininga</li>
+<li>Vönduð orsakagreining</li>
+</ul></li>
+<li><strong>Lærdómur fyrir gervigreind</strong>
+<ul>
+<li>Gæði gagna skipta meira máli en magn</li>
+<li>Mikilvægt að skilja undirliggjandi orsakasamhengi</li>
+<li>Varast ber að draga ályktanir án þess að skilja bjaga í gögnunum</li>
+</ul></li>
+</ol>
+</section>
 
 </section>
     </div>

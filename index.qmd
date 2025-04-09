@@ -39,6 +39,61 @@ revealjs-plugins:
 :::
 :::
 
+## Bjagi og dreifni
+
+::: {.columns style="font-size:60%"}
+::: {.column width="60%"}
+### Tvær tegundir skekkju
+
+- **Bjagi** (bias):
+  - Kerfisbundin skekkja
+  - Breytist ekki þótt athugunum fjölgi
+  - Dæmi: Einfalt líkan sem missir af mikilvægum mynstrum
+  
+- **Dreifni** (variance):
+  - Tilviljanakennd skekkja
+  - Minnkar þegar athugunum fjölgar
+  - Dæmi: Flókið líkan sem lærir hávaða í gögnunum
+
+### Orsakasamhengi og bjagi
+- Bjagi er aðalvandamálið þegar orsakasamhengi er rangt
+- Fleiri gögn laga ekki kerfisbundinn bjaga
+- Dæmi: Sjúkrahúsdæmið sýnir bjaga vegna vals
+:::
+
+::: {.column width="40%"}
+![](Figures/bias_variance.png){fig-align="center"}
+:::
+:::
+
+## Gagnabjagi
+
+::: {.columns style="font-size:60%"}
+::: {.column width=54%}
+![](Figures/sampling_bias.avif)
+:::
+::: {.column width=46%}
+![](Figures/selection_bias_xkcd.png)
+:::
+Er þetta **dreifni** eða **bjagi**?
+:::
+
+## Hvað getum við gert?
+
+::: {style="font-size:70%"}
+1. **Íhlutun í heiminum**
+    - Handahófskennd úthlutun
+    - Jafnar áhrifabreytur
+    - "Gold standard" orsakarannsókna
+2. **Skynsamlega valin gögn**
+    - Náttúrulegar tilraunir
+    - Samsvörun (matching)
+    - Gæði umfram magn
+3. **Orsakagreining**
+    - Tilkynnum forsendur
+    - Leiðum út besta líkan
+:::
+
 ## Ronald Fisher  *(1890 - 1962)*
 
 ::: {.columns style="font-size:45%"}
@@ -46,7 +101,7 @@ revealjs-plugins:
 ![](Figures/ronald_fisher.png){fig-align="center" width=60%}
 :::
 ::: {.column width=40%}
-> "In relation to the test of significance, the experimenter is often not so much testing a hypothesis as interrogating Nature, asking her, as it were, a question; and **randomization is the device which ensures that Nature’s answer shall be a valid one**.”
+> "In relation to the test of significance, the experimenter is often not so much testing a hypothesis as interrogating Nature, asking her, as it were, a question; and **randomization is the device which ensures that Nature's answer shall be a valid one**.”
 >
 > — Ronald A. Fisher, The Design of Experiments (1935)
 
@@ -69,6 +124,59 @@ revealjs-plugins:
 ![](Figures/farmer2.png)
 :::
 :::
+
+## Samsvörun (Matching)
+
+::: {style="font-size:60%"}
+### Hvað er samsvörun?
+
+- Aðferð til að **para saman einstaklinga** sem eru líkir á öllum mikilvægum þáttum **nema meðferðinni** sem við rannsökum
+- Markmið: Skapa **jafnvægi** í áhrifaþáttum milli samanburðarhópa
+- Grundvallaratriði: Bera saman **sambærilegar einingar** til að draga ályktanir um orsakasambönd
+
+### Dæmi um nálgun
+- Para saman skóla með svipað hlutfall nemenda úr erfiðum aðstæðum
+- Bera saman sjúklinga með svipaða sjúkrasögu og aldur
+- Bera saman íbúa með svipaða félagslega stöðu
+:::
+
+
+## Öryggisbelti og bílslys: Flókin orsakasamhengi
+
+
+- **Spurning**: Draga öryggisbelti úr dánartíðni í bílslysum?
+- **Vandamál**: Ekki hægt að gera tilraun með slembiröðun
+- **Flækjustig**: 
+  - Margir þættir hafa áhrif á alvarleika slysa (hraði, vegaðstæður, viðbragðstími)
+  - Fólk sem notar belti er líklega varfærnara almennt
+
+
+
+## Venjuleg greining (með bjaga)
+
+::: {.columns style="font-size:65%"}
+::: {.column width="50%"}
+### Algeng nálgun
+- Bera saman dánartíðni:
+  - Fólk með belti vs. ekki með belti
+- **Vandamál**: 
+  - Varfærnir ökumenn nota belti
+  - Áhættusæknir ökumenn nota síður belti
+:::
+::: {.column width="50%"}
+### Náttúruleg tilraun
+- Greindi slys þar sem **tveir voru í bíl**
+- **Ein manneskja með belti, önnur án**
+- **Önnur manneskjan lifði, hin lést**
+- Margir áhrifaþættir eru þá **eins fyrir báða**:
+  - Hraði bílsins
+  - Vegaðstæður
+  - Árekstrarhornið
+  - Ökumaðurinn
+:::
+:::
+![](Figures/seatbelts_table.png){fig-align="center"}
+
 
 ## Glæpahneigð og... nefhorn?
 
@@ -129,50 +237,62 @@ revealjs-plugins:
 :::
 :::
 
-## Ladder of Causation
-
-:::: {.columns style="font-size:56%"}
-::: {.column width="50%"}
-![](Figures/ladder.png)
-
-
+::: {.columns}
+::: {.column width=25%}
+![](Figures/fork.png)
 :::
-
-::: {.column width="50%"}
-
-> All the impressive achievements of deep learning amount to just curve fitting.
-> 
-> Judea Pearl
-
+::: {.column width=25%}
+![](Figures/pipe.png)
 :::
-::::
-
-## Lungnabólga og asmi
-
-::: {.incremental}
-- 1996 rannsókn sýndi að gervigreindarlíkan spáði fyrir um áhættu sjúklinga með lungnabólgu
-- **Óvæntar niðurstöður**: Líkanið spáði að astmasjúklingar væru í *minni* áhættu vegna lungnabólgu
-- Ef líkanið væri notað, myndu astmasjúklingar líklega sendir heim fremur en á gjörgæslu
+::: {.column width=25%}
+![](Figures/collider.png)
 :::
+::: {.column width=25%}
+![](Figures/descendant.png)
+:::
+::: 
 
-## Af hverju gerðist þetta?
+## Gervigreindarspár og ákvarðanir
 
 ::: {.columns}
-::: {.column width="50%"}
-### Hvað gerðist í raun?
-
-- Astmasjúklingar voru í meiri hættu
-- Þeir fengu betri og tafarlausari meðferð
-- Þeir voru sendir beint á gjörgæslu
-- Niðurstaða: Færri fylgikvillar *mældir* hjá astmasjúklingum
+::: {.column width="70%"}
+- Útkoma sjúklinga eftir inflúensu?
+    - Líkanið spáði að astmasjúklingar væru í *minni* áhættu vegna lungnabólgu
+- Hætta á of háum blóðþrýstingi
+    - Sjúklegar með háan blóðþrýsting eru á lyfjum
+    - Líkanið ruglast ef það er ekki tekið með í reikninginn
+:::
+::: {.column width="30%"}
+![](Figures/aisnakeoil.jpg)
+:::
 :::
 
-::: {.column width="50%"}
-### Hvað lærði líkanið?
-
-- Gat aðeins byggt á sögulegu gögnum
-- Lærði að astma → minni fylgikvillar
-- En lærði ekki *af hverju* þetta samband var til staðar
-- Ruglað fylgni (correlation) saman við orsakasamhengi (causation)
+::: {style="font-size:60%"}
+> This issue arose in part ­ because the researchers relied on existing data rather than new data collected specifically for the task. Generally, collecting data is expensive and time-consuming. So, some AI developers claim that existing data is enough to make good decisions.
+>
+> Narayanan & Kapoor - AI Snake Oil
 :::
+
+## Samantekt
+
+::: {style="font-size:65%"}
+### Lykilhugtök og lærdómur
+
+1. **Bjagi og dreifni**
+    - Bjagi: Kerfisbundin skekkja sem fleiri gögn laga ekki
+    - Dreifni: Tilviljanakennd skekkja sem minnkar með fleiri gögnum
+
+2. **Orsakasamhengi og gagnabjagi**
+    - Gagnabjagi getur leitt til rangra ályktana um orsakasamhengi
+    - Mikilvægt að greina á milli fylgni og orsakasamhengis
+
+3. **Lausnir og aðferðir**
+    - Slembitilraunir (Ronald Fisher)
+    - Samsvörun (matching) sambærilegra eininga
+    - Vönduð orsakagreining
+
+4. **Lærdómur fyrir gervigreind**
+    - Gæði gagna skipta meira máli en magn
+    - Mikilvægt að skilja undirliggjandi orsakasamhengi
+    - Varast ber að draga ályktanir án þess að skilja bjaga í gögnunum
 :::
